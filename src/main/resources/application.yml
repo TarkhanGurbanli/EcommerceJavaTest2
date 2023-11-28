@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: samaritan_core
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: tarxan123
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      pool-name: SamaritanHikariPool
+      auto-commit: false
+      connection-timeout: 10000
+      idle-timeout: 60000
+      max-lifetime: 120000
+      minimum-idle: 8
+      maximum-pool-size: 16
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+
+
+
